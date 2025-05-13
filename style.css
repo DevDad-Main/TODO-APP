@@ -9,9 +9,22 @@
 body {
     height: 100vh;
     background: linear-gradient(135deg, #865dff, #e384ff);
+    animation: gradient-animation 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
