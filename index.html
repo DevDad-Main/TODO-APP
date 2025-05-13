@@ -3,17 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>To Do List</title>
+        <title>Enhanced To-Do List</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <!-- Styles -->
         <link rel="stylesheet" href="style.css" />
+
+        <!-- SortableJS for drag & drop -->
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     </head>
     <body>
         <div class="container">
+            <!-- Input Section -->
             <div id="newtask">
                 <input type="text" placeholder="Task to be added..." />
                 <button id="push">Add</button>
             </div>
+
+            <!-- Filter Buttons -->
+            <div class="filters">
+                <button onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('active')">Active</button>
+                <button onclick="filterTasks('completed')">Completed</button>
+                <button id="clearAll">Clear All</button>
+            </div>
+
+            <!-- Task List -->
             <div id="tasks"></div>
         </div>
-        <script src="script.js"></script>
+
+        <!-- Script -->
+        <script src="script.js" charset="utf-8"></script>
     </body>
 </html>
